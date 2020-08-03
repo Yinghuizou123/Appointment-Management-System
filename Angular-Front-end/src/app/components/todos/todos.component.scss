@@ -1,0 +1,115 @@
+@import "./navbar";
+@import "./variable";
+@mixin columnImage($weight, $peddingleft) {
+  float: left;
+  padding: 20px;
+  width: $weight;
+  padding-left: $peddingleft;
+  position: relative;
+  text-align: center;
+}
+@mixin sectiontitle() {
+  text-align: center;
+  color: $secondTitleColor;
+  font-size: 60px;
+}
+.ServiceTitle {
+  @include sectiontitle();
+}
+.imageTitle {
+  @include sectiontitle();
+  margin-right: 250px;
+}
+.image2Title {
+  @include sectiontitle();
+}
+
+.column {
+  @include columnImage(33%, 30px);
+}
+.bottom-left {
+  position: absolute;
+  color: brown;
+  font-family: "Lucida Console", Courier, monospace;
+  font-size: 23px;
+  font-weight: bold;
+  top: 83%;
+  left: 70%;
+}
+.column2 {
+  @include columnImage(50%, 23px);
+  img {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.storeTitle {
+  text-align: center;
+  width: 70%;
+  font-weight: bold;
+  color: rgb(194, 33, 33);
+  font-size: 75px;
+  display: inline;
+  margin-left: 25%;
+}
+
+.titleSection {
+  margin-left: 15px;
+}
+
+.row {
+  padding-left: 20px;
+  padding-right: 20px;
+  // &::after {
+  //   content: "";
+  //   clear: both;
+  //   display: table;
+  // }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #14171a;
+  @include headerFooter();
+  padding: 10px;
+}
+
+@media screen and (max-width: 950px) {
+  .imageTitle {
+    margin-right: 150px;
+  }
+  .topnav a {
+    padding: 20px 150px;
+  }
+  .column,
+  .column2 {
+    float: left;
+    width: 100%;
+    padding: 20px;
+    img {
+      height: 300px;
+    }
+  }
+  .storeTitle {
+    display: inline-block;
+    margin-left: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .imageTitle {
+    margin-right: 0px;
+  }
+  .topnav a {
+    padding: 20px 26px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    padding: 20px 20px;
+  }
+}

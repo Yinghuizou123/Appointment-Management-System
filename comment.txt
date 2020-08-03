@@ -1,0 +1,7 @@
+docker rm $(docker ps -aq)
+docker rmi -f $(docker images -a -q)
+docker-compose up
+docker ps -a
+docker container stop  017456b01b10
+docker exec -i -t angularui sh
+kill $(lsof -t -i:8080)

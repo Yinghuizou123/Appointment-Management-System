@@ -1,0 +1,60 @@
+<app-header> </app-header>
+
+<div class="col-md-6" style="margin: 0px auto;">
+  <h2 class="text-center" style="margin:10px; font-weight: bold;">
+    Tang Chao Spa Admin Login
+  </h2>
+
+  <div *ngIf="alert" class="alert alert-primary" role="alert">
+    <strong> Failure: </strong> Your username or Password are incorrect
+    <button
+      (click)="closeAlert()"
+      type="button"
+      class="close"
+      data-dismiss="alert"
+      aria-label="Close"
+    >
+      <span aria-hidden="true"> &times; </span>
+    </button>
+  </div>
+
+  <form>
+    <div class="form-group">
+      <label for="name">Username:</label>
+
+      <input
+        type="text"
+        name="username"
+        [(ngModel)]="username"
+        class="form-control"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Password:</label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="password"
+        class="form-control"
+      />
+    </div>
+    <div *ngIf="loading">
+      <img
+        src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif"
+        alt="HTML5 Icon"
+        style="display: block;
+        margin-left: auto;
+        margin-right: auto;"
+        width="128"
+        height="128"
+      />
+    </div>
+    <button
+      (click)="checkLogin()"
+      class="btn btn-primary mx-auto d-block  btn-lg"
+    >
+      Login
+    </button>
+  </form>
+</div>

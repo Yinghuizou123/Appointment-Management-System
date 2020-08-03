@@ -1,0 +1,24 @@
+.Servicename {
+  color: white;
+  text-align: center;
+}
+.ServiceDetails {
+  color: brown;
+  text-align: center;
+}
+.service {
+  float: left;
+  width: 25%;
+}
+h2 {
+  font-family: "Lucida Console", Courier, monospace;
+}
+h5 {
+  font-family: "Lucida Console", Courier, monospace;
+}
+
+@media screen and (max-width: 600px) {
+  .service {
+    width: 100%;
+  }
+}

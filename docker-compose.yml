@@ -1,0 +1,44 @@
+# Springboot need to maven build in springtoolsuite to generate jar file
+# production
+
+version: "3"
+services:
+  springapi:
+    image: openjdk:8
+    container_name: springapi
+    ports:
+      - 8080:8080
+    volumes:
+      - ./SpringBoot-Back-end/target/TangChao-Spa-0.0.1-SNAPSHOT.jar:/application.jar
+    command: ["java", "-jar", "application.jar"]
+  angularui:
+    build: ./Angular-Front-end
+    container_name: angularui
+    volumes:
+      - "/app/node_modules"
+      - "./Angular-Front-end:/app"
+    ports:
+      # in development import host request on 4500, and show to user on port 4200
+      # package.json file replace start "ng serve "with
+      # "start": "ng serve --host 0.0.0.0 --port 4500"
+      # put - "4200:4500" instead of "4200:80"
+      - "4200:80"
+    depends_on:
+      - springapi
+# Spring boot
+# development
+# enviorment
+#below
+
+# below code are use for maven build for spring boot development
+# need to docker compose up when make change
+# version: "3.1"
+# services:
+#   springapi:
+#     image: maven:3.6.3-jdk-8
+#     command: mvn spring-boot:run
+#     ports:
+#       - 8080:8080
+#     volumes:
+#       - ./SpringBoot-Back-end:/usr/src/mymaven:rw
+#     working_dir: /usr/src/mymaven

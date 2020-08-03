@@ -1,0 +1,5 @@
+#spring.jpa.hibernate.ddl-auto=create
+spring.datasource.url= databases.000webhost.com:3306
+spring.datasource.username=id14516877_tangchaospauser
+spring.datasource.password=zKvOh@9_y4H^D[_(
+spring.datasource.driver-class-name= com.mysql.cj.jdbc.Driver

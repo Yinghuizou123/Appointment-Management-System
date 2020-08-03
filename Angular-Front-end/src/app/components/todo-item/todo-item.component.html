@@ -1,0 +1,37 @@
+<!-- <div [ngClass]="setClasses()">
+  <p>
+    <input (change)="onToggle(todo)" type="checkbox" />
+    {{ todo.title }}
+    <button (click)="onDelete(todo)" class="del">x</button>
+  </p>
+  <input type="text" [(ngModel)]="name" />
+  <h3>You type {{ name }}</h3>
+</div> -->
+
+<div class="service">
+  <h2 class="Servicename">{{ todo.ServiceName }}</h2>
+
+  <ng-template [ngIf]="todo.ServiceTime1 != ''">
+    <h5 class="ServiceDetails">
+      {{ todo.ServiceTime1 }} {{ todo.ServiceTime1Price }}
+    </h5>
+  </ng-template>
+
+  <ng-template [ngIf]="todo.ServiceTime2 != ''">
+    <h5 class="ServiceDetails">
+      {{ todo.ServiceTime2 }} {{ todo.ServiceTime2Price }}
+    </h5>
+  </ng-template>
+
+  <ng-template [ngIf]="todo.ServiceTime3 != ''">
+    <h5 class="ServiceDetails">
+      {{ todo.ServiceTime3 }} {{ todo.ServiceTime3Price }}
+    </h5>
+  </ng-template>
+
+  <ng-template [ngIf]="todo.ServiceTime4 != ''">
+    <h5 class="ServiceDetails">
+      {{ todo.ServiceTime4 }} {{ todo.ServiceTime4Price }}
+    </h5>
+  </ng-template>
+</div>

@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <title>TangChao Spa</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="topnav">
+      <h3 style="margin-top: 35px">Phone: 718-865-7756</h3>
+
+      <h3>Address: 1112 Avenue U Brooklyn,NY 11223</h3>
+      <a href="#service">Services</a>
+      <a href="#sample"> Sample Show</a>
+      <a href="#Environment">Environment </a>
+      <a href="#Equipment">Equipment</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <div class="header">
+      <div class="titleSection">
+        <h1 class="storeTitle">
+          Tang Chao Spa
+        </h1>
+        <img
+          style="display: inline-block;"
+          src="assets/image/sp1.png"
+          width="80"
+        />
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column2">
+        <img src="assets/image/icon.jpeg" alt="Snow" />
+      </div>
+      <div class="column2">
+        <img src="assets/image/icon2.jpeg" alt="Forest" />
+      </div>
+    </div>
+
+    <h1 id="service" class="ServiceTitle">Services we are offering</h1>
+
+    <app-todo-item *ngFor="let todo of todos" [todo]="todo"> </app-todo-item>
+
+    <h1 id="sample" class="imageTitle">Sample Show</h1>
+
+    <div class="row">
+      <div class="column">
+        <img src="assets/image/spa1.jpeg" style="width:100% " />
+        <div class="bottom-left">Facial</div>
+      </div>
+      <div class="column">
+        <img src="assets/image/spa2.jpeg" style="width:100%" />
+        <div class="bottom-left">Back</div>
+      </div>
+      <div class="column">
+        <img src="assets/image/spa3.jpeg" style="width:100%" />
+        <div class="bottom-left">Cupping</div>
+      </div>
+    </div>
+
+    <h1 id="Environment" class="image2Title">Environment</h1>
+
+    <div class="row">
+      <div class="column">
+        <img src="assets/image/spa4.jpeg" style="width:100% " />
+      </div>
+      <div class="column">
+        <img src="assets/image/spa5.jpeg" style="width:100%" />
+      </div>
+      <div class="column">
+        <img src="assets/image/spa6.jpeg" style="width:100%" />
+      </div>
+    </div>
+
+    <h1 id="Equipment" class="image2Title">Equipment</h1>
+
+    <div class="row">
+      <div class="column">
+        <img src="assets/image/spa7.jpeg" style="width:100% " />
+      </div>
+      <div class="column">
+        <img src="assets/image/spa8.jpeg" style="width:100%" />
+      </div>
+      <div class="column">
+        <img src="assets/image/spa9.jpeg" style="width:100%" />
+      </div>
+    </div>
+
+    <div id="contact" class="footer">
+      <h2>Contact</h2>
+      <h3>Phone: 718-865-7756</h3>
+      <h3>Address: 1112 Avenue U Brooklyn,NY 11223</h3>
+      <h3>Open 7 days a week 11:00 am to 10:00 pm</h3>
+      <h6>©2020 TangChao Spa</h6>
+      <h6>All Rights Reserved</h6>
+
+      <a style="color:white" routerLink="/login">ZYH & LJY</a>
+    </div>
+  </body>
+</html>

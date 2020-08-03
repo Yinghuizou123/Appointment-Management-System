@@ -1,0 +1,63 @@
+<header>
+  <!-- <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div>
+      <a routerLink="" class="navbar-brand">Tangchao Spa</a>
+    </div>
+  </nav> -->
+  <nav
+    id="navbar"
+    class="navbar navbar-expand-md navbar-light"
+    style="background-color:  #14171a; "
+  >
+    <div>
+      <a
+        routerLink=""
+        style="color: white; font-size: 25px; font-weight: bold;"
+        class="navbar-brand"
+        >Tangchao Spa</a
+      >
+    </div>
+
+    <ul class="navbar-nav">
+      <li>
+        <a
+          *ngIf="loginService.isUserLoggedIn()"
+          routerLink="/customers"
+          style="color: white;"
+          class="nav-link"
+          >View Customers</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="loginService.isUserLoggedIn()"
+          routerLink="/addCustomer"
+          class="nav-link"
+          style="color: white;"
+          >Add New Customer</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="!loginService.isUserLoggedIn()"
+          routerLink="/login"
+          class="nav-link"
+          style="color: white;"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          *ngIf="loginService.isUserLoggedIn()"
+          routerLink="/logout"
+          class="nav-link"
+          style="color: white;"
+          >Log out</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" style="color: white;">此网站由爱静静的啊辉开发</a>
+      </li>
+    </ul>
+  </nav>
+</header>
